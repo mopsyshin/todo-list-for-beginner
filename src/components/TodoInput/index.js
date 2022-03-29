@@ -12,7 +12,15 @@ TodoInput.propTypes = {
 }
 
 const Style = styled.input`
-
+  width: 100%;
+  background-color: #0000000d;
+  border: none;
+  appearance: none;
+  padding: 11px 13px;
+  border-radius: 4px;
+  &::placeholder {
+    color: #00000050;
+  }
 `
 
 export default TodoInput

@@ -62,8 +62,10 @@ function App() {
         <div className="wrapper">
           <TodoHeader/>
           <div className="input-area">
-            <TodoInput value={value} onChange={onChangeHandler}/>
-            <TodoButton onClick={addTodo} disabled={value.trim() === ''}>추가하기</TodoButton>
+            <TodoInput value={value} onChange={onChangeHandler} placeholder="할 일을 입력하세요"/>
+            <TodoButton onClick={addTodo} disabled={value.trim() === ''} style={{
+              width: '120px'
+            }}>추가하기</TodoButton>
           </div>
           <div className="todo-list">
             {
@@ -87,8 +89,16 @@ const AppStyle = styled.div`
     max-width: 375px;
     margin: 0 auto;
   }
+  .input-area {
+    display: flex;
+    gap: 8px;
+  }
   .todo-list {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
   }
 `
 

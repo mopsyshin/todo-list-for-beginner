@@ -17,7 +17,14 @@ TodoButton.propTypes = {
 }
 
 const Style = styled.button`
-
+  background-color: #426EFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:disabled {
+    background-color: #00000020;
+  }
 `
 
 export default TodoButton
